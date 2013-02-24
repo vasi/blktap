@@ -11,7 +11,7 @@ AC_PROG_MAKE_SET
 AC_CANONICAL_HOST
 AC_SYS_LARGEFILE
 AC_CHECK_HEADERS([uuid/uuid.h], [], [Need uuid-dev])
-AC_CHECK_HEADERS([libaio.h], [], [Need libaio-dev])
+#AC_CHECK_HEADERS([libaio.h], [], [Need libaio-dev])
 
 AC_ARG_WITH([libiconv],
 	     [AS_HELP_STRING([--with-libiconv],
@@ -19,9 +19,9 @@ AC_ARG_WITH([libiconv],
              [],
              [with_libiconv=check])
 
-AC_CHECK_LIB([aio], [main],
-             [:],
-             AC_MSG_ERROR([Need libaio-dev]))
+# AC_CHECK_LIB([aio], [main],
+#              [:],
+#              AC_MSG_ERROR([Need libaio-dev]))
 
 AC_CHECK_LIB([uuid], [main],
              [:],

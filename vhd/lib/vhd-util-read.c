@@ -759,7 +759,7 @@ vhd_util_read(int argc, char **argv)
 	if (!argc || !argv)
 		goto usage;
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:pt:b:Bm:i:e:aj:d:c:r:R:xCh")) != -1) {
 		switch(c) {
 		case 'n':

@@ -1303,7 +1303,7 @@ vhd_util_scan(int argc, char **argv)
 	volume  = NULL;
 	targets = NULL;
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "m:fcl:pavMh")) != -1) {
 		switch (c) {
 		case 'm':

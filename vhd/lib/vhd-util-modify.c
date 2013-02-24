@@ -86,7 +86,7 @@ vhd_util_modify(int argc, char **argv)
 	parent_raw = 0;
 	kill_data  = 0;
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:s:p:mzh")) != -1) {
 		switch (c) {
 		case 'n':

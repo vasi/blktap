@@ -1112,7 +1112,7 @@ vhd_util_resize(int argc, char **argv)
 	jname = NULL;
 	fast  = 0;
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:s:j:fh")) != -1) {
 		switch (c) {
 		case 'n':

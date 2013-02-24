@@ -1206,7 +1206,7 @@ vhd_util_check(int argc, char **argv)
 	memset(&ctx, 0, sizeof(ctx));
 	vhd_util_check_stats_init(&ctx);
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:iItpbBsh")) != -1) {
 		switch (c) {
 		case 'n':

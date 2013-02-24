@@ -661,7 +661,7 @@ vhd_util_coalesce(int argc, char **argv)
 	if (!argc || !argv)
 		goto usage;
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:o:a:sph")) != -1) {
 		switch (c) {
 		case 'n':

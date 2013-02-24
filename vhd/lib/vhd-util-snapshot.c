@@ -135,7 +135,7 @@ vhd_util_snapshot(int argc, char **argv)
 		goto usage;
 	}
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:p:S:l:meh")) != -1) {
 
 		switch (c) {

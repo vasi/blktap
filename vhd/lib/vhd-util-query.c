@@ -62,7 +62,7 @@ vhd_util_query(int argc, char **argv)
 		goto usage;
 	}
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:vspfdSmh")) != -1) {
 		switch (c) {
 		case 'n':

@@ -51,7 +51,7 @@ vhd_util_revert(int argc, char **argv)
 	name  = NULL;
 	jname = NULL;
 
-	optind = 0;
+	optind = 1;
 	while ((c = getopt(argc, argv, "n:j:h")) != -1) {
 		switch (c) {
 		case 'n':

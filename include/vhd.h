@@ -33,6 +33,9 @@
 #include <inttypes.h>
 #include <uuid/uuid.h>
 
+#define off64_t off_t
+#define lseek64 lseek
+
 #define DEBUG 1
 
 /* ---------------------------------------------------------------------- */

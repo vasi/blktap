@@ -32,28 +32,18 @@
 #define _VHD_LIB_H_
 
 #include <string.h>
-#include <endian.h>
-#include <byteswap.h>
+#include <libkern/OSByteOrder.h>
 #include <uuid/uuid.h>
 
 #include "vhd.h"
 #include "list.h"
 
-#if BYTE_ORDER == LITTLE_ENDIAN
-  #define BE16_IN(foo)             (*(foo)) = bswap_16(*(foo))
-  #define BE32_IN(foo)             (*(foo)) = bswap_32(*(foo))
-  #define BE64_IN(foo)             (*(foo)) = bswap_64(*(foo))
-  #define BE16_OUT(foo)            (*(foo)) = bswap_16(*(foo))
-  #define BE32_OUT(foo)            (*(foo)) = bswap_32(*(foo))
-  #define BE64_OUT(foo)            (*(foo)) = bswap_64(*(foo))
-#else
-  #define BE16_IN(foo)
-  #define BE32_IN(foo)
-  #define BE64_IN(foo)
-  #define BE32_OUT(foo)
-  #define BE32_OUT(foo)
-  #define BE64_OUT(foo)
-#endif
+#define BE16_IN(foo)             (*(foo)) = OSSwapBigToHostInt16(*(foo))
+#define BE32_IN(foo)             (*(foo)) = OSSwapBigToHostInt32(*(foo))
+#define BE64_IN(foo)             (*(foo)) = OSSwapBigToHostInt64(*(foo))
+#define BE16_OUT(foo)            (*(foo)) = OSSwapHostToBigInt16(*(foo))
+#define BE32_OUT(foo)            (*(foo)) = OSSwapHostToBigInt32(*(foo))
+#define BE64_OUT(foo)            (*(foo)) = OSSwapHostToBigInt64(*(foo))
 
 #define BIT_MASK                   0x80
 

@@ -36,6 +36,10 @@
 #define off64_t off_t
 #define lseek64 lseek
 
+#define O_LARGEFILE 0
+#define O_DIRECT 0
+#define MAP_ANONYMOUS MAP_ANON
+
 #define DEBUG 1
 
 /* ---------------------------------------------------------------------- */

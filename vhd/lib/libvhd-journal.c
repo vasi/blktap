@@ -122,7 +122,7 @@ vhd_journal_sync(vhd_journal_t *j)
 {
 	int err;
 
-	err = fdatasync(j->jfd);
+	err = fsync(j->jfd);
 	if (err)
 		return -errno;
 

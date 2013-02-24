@@ -32,6 +32,7 @@
 #define _VHD_LIB_H_
 
 #include <string.h>
+#include <time.h>
 #include <libkern/OSByteOrder.h>
 #include <uuid/uuid.h>
 

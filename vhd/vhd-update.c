@@ -46,8 +46,6 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <endian.h>
-#include <byteswap.h>
 
 #include "libvhd.h"
 #include "libvhd-journal.h"
